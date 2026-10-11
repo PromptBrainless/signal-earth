@@ -1,0 +1,204 @@
+Die offizielle Dokumentation bestätigt einen wichtigen Punkt: Falls du mit Grok Building AI den Coding-Agenten Grok Build meinst, kann er Projektregeln über `AGENTS.md` laden. Damit lassen sich dauerhafte Regeln von einem konkreten Bauauftrag trennen.
+
+### 1\. Dauerhafte Projektanweisungen für Grok Build
+
+Diesen Text kannst du als Grundlage für `AGENTS.md` im Stammverzeichnis des Projekts verwenden.
+
+# AGENTS.md — SIGNAL EARTH
+
+## Mission
+
+Develop SIGNAL EARTH as a focused investigative simulation built on the existing God’s Eye View codebase.
+
+The first goal is **one complete, compelling, replayable mission**, not a large game with many unfinished systems.
+
+## Product vision
+
+The player acts as an investigator who reconstructs a developing incident from incomplete geospatial evidence, conflicting reports, timelines and limited investigative resources.
+
+The experience should feel intelligent, atmospheric, plausible and consequential. The player must reason about evidence rather than simply follow markers.
+
+## Non-negotiable rules
+
+1. Inspect the existing repository before making changes.
+2. Preserve the existing application and its working explorer functionality.
+3. Do not rewrite the application, replace its framework or reorganize unrelated modules.
+4. Follow the actual repository architecture, coding conventions and dependency boundaries.
+5. Verify existing APIs, components, scripts and test commands from source code. Never invent them.
+6. Keep the simulation deterministic and separate from presentation wherever practical.
+7. Clearly distinguish fictional gameplay data from real-world data.
+8. Do not introduce external API dependencies for the first mission unless essential and explicitly justified.
+9. Prefer small, reviewable changes over broad refactors.
+10. Never claim a test passed unless it was actually executed and its result inspected.
+
+## First mission: The Silent Harbor
+
+Create a fictional harbor incident involving an unexplained operational shutdown, incomplete sensor information, conflicting witness accounts and a limited investigation window.
+
+The player must be able to:
+
+- Enter and exit the mission without breaking the existing application.
+- Understand the situation and primary objective.
+- Inspect relevant locations on the globe or map.
+- Examine evidence and distinguish observations from interpretations.
+- Compare at least two plausible hypotheses.
+- Spend limited investigative time or resources.
+- Make meaningful investigative choices.
+- Submit a final assessment with a confidence level.
+- Receive a debrief explaining the evidence, uncertainty, consequences and missed opportunities.
+- Restart the mission and obtain a consistent simulation.
+
+The incident, organizations, characters and evidence must be fictional unless the project explicitly documents an authorized real-world source.
+
+## Gameplay quality
+
+Every major action must provide useful feedback.
+
+Evidence should have provenance, a timestamp or time range, a location where applicable, and an explicit indication of uncertainty when relevant.
+
+Do not reveal the answer merely by highlighting a single correct location. The player should combine multiple clues.
+
+Wrong hypotheses must be plausible. The debrief should explain why conclusions were strong or weak without pretending uncertain evidence proves more than it does.
+
+Avoid arbitrary penalties, excessive interface clutter, fake technical complexity and decorative features that do not support investigation.
+
+## Architecture
+
+First inspect the existing code and identify the smallest safe integration point.
+
+Keep mission rules, evidence, hypotheses, time/resource costs and outcome evaluation independent of globe rendering wherever practical.
+
+Use the existing UI, map, globe, styling and build infrastructure when suitable.
+
+Do not add a second framework or a parallel application architecture without strong evidence that it is necessary.
+
+## Workflow
+
+Before implementation:
+
+1. Inspect repository instructions and current-state documentation.
+2. Read the relevant source modules and tests.
+3. Identify existing behavior that must remain unchanged.
+4. Write a short implementation plan with concrete acceptance criteria.
+
+Then implement in small stages:
+
+1. A testable mission and simulation model.
+2. A complete playable investigation loop.
+3. Integration with the existing map/globe and UI.
+4. Mission completion, debrief and restart.
+5. Testing, visual review and documentation.
+
+Do not stop after producing a plan when implementation is authorized. Continue through implementation and verification unless a genuine blocker requires clarification.
+
+## Scope control
+
+Do not build a campaign, multiplayer, a complex economy, procedural world simulation, extensive progression systems or multiple missions before the first mission is playable and convincing.
+
+Add dependencies only when they provide a clear benefit and are compatible with the repository.
+
+## Verification and delivery
+
+Run the applicable existing tests, build checks, formatting checks and architectural boundary checks. Inspect the actual results.
+
+Fix regressions introduced by your changes. If a check cannot be run, state why.
+
+Update relevant documentation when runtime behavior or development procedures change.
+
+At completion, report:
+
+- What was implemented.
+- Which files or modules changed.
+- How the mission is played.
+- Which checks were executed and their actual results.
+- Known limitations and recommended next steps.
+
+Prioritize a small, finished, high-quality experience over a large unfinished feature set.
+
+### 2\. Konkreter erster Bauauftrag
+
+Diesen Auftrag sendest du Grok anschließend als erste Aufgabe. Er zwingt den Agenten, sich auf eine spielbare Mission zu konzentrieren, statt nur Architekturvorschläge zu liefern.
+
+# TASK 001 — Build the first playable SIGNAL EARTH mission
+
+Read the repository-level AGENTS.md and all relevant existing project instructions first.
+
+Inspect the current codebase, including its current-state documentation, application entry points, map/globe integration, UI patterns, package scripts and relevant tests.
+
+Do not assume that proposed features or pull requests already exist. Verify the current implementation directly.
+
+## Objective
+
+Implement the smallest complete playable version of SIGNAL EARTH's first mission, "The Silent Harbor", inside the existing application.
+
+This is an implementation task, not merely a design exercise.
+
+## Required gameplay loop
+
+1. The player enters a dedicated investigation mode.
+2. A briefing establishes the fictional incident, objective and constraints.
+3. The player inspects a small, curated set of geospatial evidence.
+4. Evidence reveals conflicting but meaningful information.
+5. The player investigates, compares at least two plausible hypotheses and spends a limited resource such as investigation time.
+6. The player submits a conclusion and confidence rating.
+7. The game evaluates the conclusion against the underlying fictional scenario.
+8. A debrief explains supporting evidence, contradictory evidence, uncertainty and the consequences of the decision.
+9. The player can restart and replay the mission.
+
+## Acceptance criteria
+
+- The complete mission is playable from beginning to end.
+- Every essential interaction works.
+- The player can understand the objective without external instructions.
+- The evidence, hypotheses and outcomes are internally consistent.
+- Simulation results are deterministic for a given initial state and action sequence.
+- The simulation can be tested without requiring globe rendering.
+- The existing explorer functionality remains usable.
+- The mission works without external API credentials.
+- No new dependency is added without a clear technical justification.
+- Appropriate automated tests cover core rules and mission completion.
+- The application builds successfully, or any pre-existing or environment-related blocker is clearly documented.
+
+## Execution plan
+
+First, produce a concise repository audit and implementation plan. Identify the exact modules to reuse and the smallest safe changes required.
+
+Then proceed with implementation. Do not wait for another confirmation unless a genuine blocker, destructive operation or major architectural decision requires it.
+
+Implement the simulation model before polishing visual details. Integrate it with the existing UI and map/globe after the core rules work.
+
+Use realistic interaction feedback, readable evidence panels, a clear timeline, visible resource constraints and a useful final debrief. Reuse established project patterns instead of inventing a separate UI system.
+
+Do not add placeholder buttons, dead-end screens, decorative controls without behavior or systems that exist only to suggest future functionality.
+
+## Final verification
+
+Run the relevant project tests, build, formatting and boundary checks. Review the actual output and address regressions.
+
+Finish by providing a concise report with:
+
+- Features completed.
+- Files changed.
+- How to launch and play the mission.
+- Tests and checks actually executed.
+- Remaining issues.
+
+The definition of success is a coherent, playable investigation—not the number of files changed or features proposed.
+
+### 3\. So würde ich Grok einsetzen
+
+Schritt 1 – Repository prüfen
+
+Lass Grok zuerst die vorhandene Architektur und die vorhandenen Funktionen untersuchen. Die Regeln aus `AGENTS.md` sollten bereits geladen sein. Du kannst die geladenen Projektregeln mit `grok inspect` überprüfen.
+
+Schritt 2 – Mission tatsächlich bauen
+
+Sende `TASK 001`. Grok soll erst das Simulationsmodell testen, dann die Karte und Oberfläche integrieren und schließlich den vollständigen Ablauf spielbar machen.
+
+Schritt 3 – Qualität prüfen
+
+Lass die Mission vom Briefing bis zur Auswertung durchspielen. Prüfe insbesondere, ob falsche Schlussfolgerungen nachvollziehbar erklärt werden, ein Neustart funktioniert und der bisherige Karten-Explorer intakt bleibt.
+
+Meine Empfehlung: Nicht versuchen, Grok mit immer mehr allgemeinen Regeln zu steuern. Halte `AGENTS.md` dauerhaft, den Missionsauftrag separat und teile spätere Arbeiten in überprüfbare Meilensteine auf. Grok Build unterstützt genau diese projektbezogenen Anweisungen; wiederverwendbare, umfangreichere Abläufe lassen sich zusätzlich als Skills organisieren.
+
+Offizielle Dokumentation: [Grok Build](https://docs.x.ai/build/overview) · [Projektregeln mit AGENTS.md](https://github.com/xai-org/grok-build/blob/main/crates/codegen/xai-grok-pager/docs/user-guide/12-project-rules.md) · [Skills](https://github.com/xai-org/grok-build/blob/main/crates/codegen/xai-grok-pager/docs/user-guide/08-skills.md)
