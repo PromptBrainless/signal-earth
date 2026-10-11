@@ -21,6 +21,15 @@ export function Briefing() {
           Berth 7 for 03:10, is still holding east of the light. Fog has been thick since 01:40. No
           one is hurt. The basin is shut.
         </p>
+        <audio
+          controls
+          preload="metadata"
+          className="mt-2 w-full max-w-md"
+          src="/audio/briefing-intro.mp3"
+        >
+          Your browser does not support the audio element.
+        </audio>
+        <p className="text-xs text-muted">Narration generated with the Voice connector.</p>
       </header>
 
       <section className="grid gap-4">
